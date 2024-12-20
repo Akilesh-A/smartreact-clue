@@ -1,0 +1,83 @@
+.first-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.first-home h1{
+    color: aliceblue;
+    font-size: 150px;
+}
+.first-home p{
+    color: aliceblue;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.first-home p{
+    color: aliceblue;
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+.first-home .homeButton {
+    cursor: pointer;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff5f6d; /* Gradient color 1 */
+    background-image: linear-gradient(45deg, #ff5f6d, #ffc371); /* Gradient effect */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-image 0.3s; /* Smooth transition */
+}
+
+.first-home .homeButton:hover {
+    background-image: linear-gradient(45deg, #ffc371, #ff5f6d); 
+    transform: scale(1.05); 
+}
+
+.first-home .homeButton:active {
+    transform: scale(0.98); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .first-home h1{
+        color: aliceblue;
+        font-size: 110px;
+    }
+  }
+  @media only screen and (max-width: 430px) {
+    .first-home h1{
+        
+        font-size: 60px;
+    }
+  }
+  @media only screen and (max-width: 540px) {
+    .first-home h1{
+        
+        font-size: 70px;
+    }
+    .first-home p{
+        font-size: 16px;
+        padding-left: 10px;
+        
+    }
+   
+  }
+  @media only screen and (max-width: 344px) {
+    .first-home h1{
+        
+        font-size: 50px;
+    }
+    .first-home p{
+       padding-bottom: 30px;
+        
+    }
+  }
+  

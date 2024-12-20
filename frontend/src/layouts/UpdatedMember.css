@@ -1,0 +1,17 @@
+.asidebars {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .leftasidebar {
+    width: 270px; 
+    background-color: #f4f4f4; 
+    /* padding: 20px;  */
+  }
+  
+  .rightasidebar {
+    flex-grow: 1;
+    background-color: #ffffff; 
+    /* padding: 20px;  */
+  }
+  

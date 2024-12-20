@@ -1,0 +1,27 @@
+.collapsedNavbar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.collapsedNavbar ul li{
+    padding-left: 20px;
+}
+.nav-item .nav-link i{
+    margin-right: 8px;
+}
+.dropdown-menu{
+    background: rgb(207 215 228) !important;
+    color: #333;
+}
+.dropdown-menu li{
+    padding-left: 0 !important;
+}
+
+@media(max-width:767px){
+    .collapsedNavbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

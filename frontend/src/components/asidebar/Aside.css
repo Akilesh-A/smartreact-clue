@@ -1,0 +1,48 @@
+.asidebar{
+  width: 250px;
+  background: #7386D5;
+  transition: all 0.2s;
+
+}
+/* .asidebar .active {
+  margin-left: -250px;
+} */
+
+.asidebar .sidebarheading{
+  padding: 20px 0;
+}
+
+.asidebar .sidebarheading h1{
+  font-size: 23px;
+  text-align: center;
+}
+.asidebar ul li{
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+.asidebar ul li a{
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size:18px;
+
+
+}
+.asidebar ul li .collapse li{
+  color: red;
+ padding-bottom: 10px;
+}
+.asidebar ul li > a.dropdown-toggle::after{
+  content: '\25BC		'; /* Unicode for a right-pointing triangle */
+  float: right;
+  transition: transform 0.3s ease;
+  border-top: none !important;
+}
+
+.asidebar ul li > a[aria-expanded="true"]::after {
+  content: '\25B2		'; /* Unicode for a downward-pointing triangle */
+  /* No rotation for expanded state */
+}
+.asidebar .collide li a svg{
+  margin-right: 5px;
+}

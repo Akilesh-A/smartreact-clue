@@ -1,0 +1,101 @@
+.tableManagement{
+    padding-top: 20px;
+}
+
+.tableManagement .table-p-top{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(33, 40, 50, 0.03);
+    padding: 15px;
+}
+.tableManagement .table-p-buttons{
+ display: flex;
+ gap: 30px;
+}
+.tableManagement .table-p-buttons a{
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.9);
+   
+}
+.tableManagement .table-p-buttons a:first-child{
+    color: #f4a100;
+    border: 1px solid #f4a100;
+    padding: 5px 10px;
+}
+.tableManagement .table-p-buttons a:nth-child(2){
+    color: #e81500;
+    border: 1px solid #e81500;
+    padding: 5px 10px;
+}
+.tableManagement .table-p-buttons a:last-child{
+    color: #fff;
+    border: 1px solid #212832;
+    padding: 5px 10px;
+    background-color: #212832;
+}
+.tableManagement .table-p-buttons a:nth-child(2):hover{
+    color: #fff;
+   background-color:#e81500 ;
+}
+.tableManagement .table-p-buttons a:first-child:hover{
+    color: #fff;
+   background-color: #f4a100;
+}
+.tableManagement .table-p-bottom{
+    margin-top: 10px;
+}
+.tableManagement .table-p-bottom a{
+    padding: 7px ;
+    border: 1px solid #212832;
+    text-decoration: none;
+}
+.tablemanage-popupshowtable{
+    margin-top: 20px;
+}
+.tablemanagementSecond{
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+.tablemanagementSecond .newtop-wrap{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(33, 40, 50, 0.03);;
+}
+.newtop-end{
+    margin-right:62px
+}
+.tablemanagementSecond .newtop-wrap{
+    padding-top: 10px;
+}
+.tablemanagementSecond .newtop-wrap .newtop-title{
+    padding-left: 33px;
+}
+span.error{
+    color: red;
+}
+
+.submit-button{
+    padding: 20px 0px 0px 10px;
+}
+@media(max-width:768px){
+    .asidebars{
+        /* width: 100% !important; */
+        flex-direction: column !important;
+    }
+    .asidebars .leftasidebar{
+        width: auto;
+
+    }
+    .asidebar{
+        width: 100%;
+
+    }
+    .tableManagement{
+        padding: 0;
+    }
+    .tableManagement .table-p-top{
+        display: block;
+    }
+
+}

@@ -1,0 +1,53 @@
+.contactBg {
+    background-color: #0d1138;
+    padding: 50px 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .contactBg h4 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .chat, .mail, .social-icons {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .chat:hover, .mail:hover, .social-icons:hover {
+    transform: translateY(-5px);
+  }
+  
+.contact-link {
+    text-decoration: none;
+    /* color: #007bff; */
+    color: black !important;
+  }
+  
+.contact-link:hover {
+    color: red !important;
+    text-decoration: none;
+  }
+  
+.contact-text {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .social-icons .contact-link {
+  
+    margin: 5px 0;
+  }
+  
+  .fontawesome-icon {
+    margin-right: 8px;
+  }
+  

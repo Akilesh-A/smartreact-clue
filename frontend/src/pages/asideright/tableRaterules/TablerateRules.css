@@ -1,0 +1,14 @@
+.Tablerate-Rules{
+    padding-top: 14px;
+}
+.Tablerate-Rules .table-rate-top{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(33, 40, 50, 0.03);
+    padding: 15px;
+}
+.Tablerate-Rules .table-rate-top .table-rate-buttons{
+    display: flex;  
+    column-gap: 30px;
+}

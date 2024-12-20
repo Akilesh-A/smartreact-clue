@@ -1,0 +1,26 @@
+.navbarExtended{
+    padding-top: 21px;
+}
+.collapseNavbar .navbar-nav .nav-item{
+    padding-left: 20px;
+
+}
+.collapseNavbar .navbar-nav .nav-item .nav-link{
+    color: rgb(244, 244, 244);
+    font-size: 20px ;
+}
+.imagebrand{
+    font-family: cursive;
+    font-size: 25px !important;
+    color: white !important;
+}
+
+.imagebrand img{
+    float: left;
+    width: 35px;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+  
+}
+
