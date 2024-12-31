@@ -45,3 +45,45 @@ exports.deleteRatetable=async(req,res,next)=>{
         next(err)
     }
 }
+
+exports.updateRatetable=async (req,res,next)=>{
+    const {id}=req.params
+    console.log(id);
+  try{
+    const {
+        days,
+        startrule,
+        endrule,
+        applyTable,
+        rateType,
+        rate,
+        enable
+    }=req.body
+   const updates= await tablerate.findByIdAndUpdate(
+        id,
+        {
+        days,
+        startrule,
+        endrule,
+        applyTable,
+        rateType,
+        rate,
+        enable
+        },
+        {new:true}
+    );
+    if (!updates) {
+        return res.status(404).json({
+            message: "Rate table not found",
+        });
+    }
+    res.json({
+        message:"Rate table updated successfully",
+        updates
+    })
+
+  }catch(err){
+    next(err)
+  }
+    
+}

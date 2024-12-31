@@ -16,6 +16,8 @@ function TablerateRules() {
   const [errors, setErrors] = useState({});
   const [tables, setTables] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(false);
+  const [edit,setedit]=useState(false);
+  const [editid,seteditId]=useState(null);
 
   const validateTablerate = () => {
     const newErrors = {};
@@ -58,11 +60,51 @@ function TablerateRules() {
     if (validateTablerate()) {
       console.log("Form Submitted:", formData);
       // alert("Form Submitted Successfully!");
-      postingData()
+      if(edit){
+        updateEditData()
+      }else{
+        postingData()
+      }
+     
     } else {
       alert("Please fill all required fields");
     }
   };
+  async function updateEditData() {
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_PRODUCT_API}/updaterate/${editid}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Failed to update the data");
+      }
+      alert("Data updated successfully");
+      setShow(false)
+      setShouldFetch((prev) => !prev);
+    } catch (err) {
+      console.error("Error updating data:", err);
+      alert("Error updating data. Please try again.");
+    }
+  }
+  
+  // async function updateEditData(){
+  //   try{
+  //     const response=await fetch (process.env.REACT_APP_PRODUCT_API+"/updaterate/"+editid,{
+  //       method: 'PUT',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify(formData)
+  //     })
+  //   }catch(err){
+  //     console.error("Error updating data");
+  //   }
+  // }
  async function postingData(){
     const response = await fetch(process.env.REACT_APP_PRODUCT_API + '/createtable', {
       method: "POST",
@@ -76,6 +118,28 @@ function TablerateRules() {
    
 
     }
+  }
+
+
+
+  const handleEdit=(table)=>{
+    console.log(table);
+    setShow(true);
+    setedit(true);
+    seteditId(table._id)
+
+    setFormData({
+      days: table.days,
+      startrule: table.startrule,
+      endrule: table.endrule,
+      applyTable: table._id,
+      rateType: table.rateType,
+      rate: table.rate,
+      enable: table.enable,
+    })
+
+    
+
   }
   async function getDatatable(){
 
@@ -129,6 +193,8 @@ function TablerateRules() {
     }
     
   }
+
+
 
   return (
     <div className="container-fluid">
@@ -217,7 +283,7 @@ function TablerateRules() {
                               
                           </td>
                           <td>
-                            <button className="btn btn-link">Edit</button>
+                            <button className="btn btn-link" onClick={()=>{handleEdit(table)}}>Edit</button>
                             <button className="btn btn-link" onClick={()=>deleteRatetable(table._id)}>Delete</button>
                           </td>
                         

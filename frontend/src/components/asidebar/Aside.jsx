@@ -17,7 +17,7 @@ function Aside() {
        <li><a href=""> <BankOutlined />POS</a></li>
        <li><Link to='/dashboard/updatedmember/table-management'><TableOutlined />Table Management</Link></li>
        <li><Link to="/dashboard/updatedmember/table-rate-rules"><ToolOutlined /> Table Rate Rules</Link></li>
-       <li><a href=""><UsergroupDeleteOutlined />Members</a></li>
+       <li><Link to="/dashboard/updatedmember/members"><UsergroupDeleteOutlined />Members</Link></li>
        <li><a href=""><RocketOutlined />Suppliers</a></li>
 
        <li className="active"><a href="#inventory-submenu" data-bs-toggle="collapse" aria-expanded="false" className="dropdown-toggle"><ShoppingOutlined />Inventory</a>

@@ -4,6 +4,7 @@ import Aside from '../components/asidebar/Aside';
 import Dashboard from '../pages/asideright/Dashboard';
 import TableManagement from '../pages/asideright/tableManagement/TableManagement';
 import TablerateRules from '../pages/asideright/tableRaterules/TablerateRules';
+import Members from '../pages/asideright/members/Members';
 
 import '../layouts/UpdatedMember.css';
 
@@ -21,6 +22,7 @@ function UpdatedMember() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/table-management" element={<TableManagement />} />
           <Route path="/table-rate-rules" element={<TablerateRules/>} />
+          <Route path="/members" element={<Members />} />
           {/* <Route path="/other" element={<OtherPage />} />  */}
         </Routes>
       </div>
