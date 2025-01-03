@@ -23,7 +23,7 @@ function Aside() {
        <li className="active"><a href="#inventory-submenu" data-bs-toggle="collapse" aria-expanded="false" className="dropdown-toggle"><ShoppingOutlined />Inventory</a>
 
            <ul className="list-items collapse" id="inventory-submenu">
-               <li><a href="">Home 1</a></li>
+               <li><Link >Home</Link></li>
                <li><a href="">Home 2</a></li>
                <li><a href="">Home 3</a></li>
            </ul>
@@ -31,7 +31,7 @@ function Aside() {
        <li className="active"><a href="#menu-submenu" data-bs-toggle="collapse" aria-expanded="false" className="dropdown-toggle"><ShoppingCartOutlined />Menu</a>
 
 <ul className="list-items collapse" id="menu-submenu">
-    <li><a href="">Home 1</a></li>
+    <li><Link to="/dashboard/updatedmember/menu">Menu 1</Link></li>
     <li><a href="">Home 2</a></li>
     <li><a href="">Home 3</a></li>
 </ul>
