@@ -3,7 +3,7 @@ import React from 'react'
 function Menu() {
   return (
     <div>
-      <h1>menu</h1>
+      <h1>I am Menu</h1>
       
       
     </div>
