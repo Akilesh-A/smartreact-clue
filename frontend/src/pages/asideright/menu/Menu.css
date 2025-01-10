@@ -1,0 +1,148 @@
+/* Common Banner Styling */
+.banner {
+    position: relative;
+    background-color: #000;
+    min-height: 500px; /* Decreased the banner height */
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assetes/menu/download.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    overflow: hidden;
+    /* z-index: -1; */
+}
+
+/* Common Banner Slide Layout */
+.banner-slide {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+   
+}
+
+/* First Slide: Center Text */
+.slide-one .banner-slide {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.slide-one .banner-slide .one{
+    position: absolute;
+    top: 29%;
+    width: 109px;
+    left: 34%;
+
+}
+.slide-one .banner-slide .two{
+    position: absolute;
+    top: 218px;
+    width: unset;
+    left: 51%;
+}
+.slide-one .banner-slide .three{
+    position: absolute;
+    top: 38%;
+    width: unset;
+    left: 62%;
+}
+.slide-one .banner-slide .four{
+    position: absolute;
+    top: 76%;
+    width: unset;
+    right: 27%;
+    animation-delay: 5s;
+
+}
+.slide-one .banner-slide .five{
+    position: absolute;
+    top: 79%;
+    width: unset;
+    right: 61%;
+   animation-duration: 5s;
+}
+.slide-one .banner-slide .six{
+    position: absolute;
+    top: 44%;
+    width: unset;
+    left: 28%;
+    animation-duration: 2s;
+
+}
+
+/* Second Slide: Text Left, Image Right */
+.slide-two .banner-slide {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.slide-one .banner-slide img{
+    margin-bottom: 10px;
+}
+.slide-two .text {
+    flex: 1;
+    padding: 20px;
+}
+
+.slide-two .image {
+    flex: 1;
+    text-align: right;
+}
+
+/* Third Slide: Image Right, Text Center */
+.slide-three .banner-slide {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.slide-three .image {
+    margin-left: 20px;
+}
+
+.slide-three .text {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Adjust Image */
+.pizza-img {
+    width: 550px !important;
+    height: auto;
+    margin: 20px;
+}
+
+.slide-one .banner-slide h2{
+    font-size: 150px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    animation: rotate360 2s ease;
+  
+}
+@keyframes rotate360{
+    0% {
+        transform: rotate(0deg); /* Initial position */
+      }
+      100% {
+        transform: rotate(360deg); /* Final position */
+      }
+}
+@media (max-width: 767px) {
+    .pizza-img{
+        width: 100% !important;
+    }
+
+}
+

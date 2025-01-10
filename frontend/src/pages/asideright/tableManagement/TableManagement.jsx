@@ -21,7 +21,6 @@ function TableManagement() {
     ratePerMin2: "",
     roomRate: "",
     tableTheme: "",
-    
   });
   const [errors, setErrors] = useState({});
   const [tableData,settableData]=useState([]);
@@ -36,26 +35,12 @@ function TableManagement() {
 
   const validateTable = (data) => {
     let errors = {};
-
-    if (!data.tableName.trim()) {
-      errors.tableName = "Table Name is required";
-    }
-    if (!data.tableCharges.trim()) {
-      errors.tableCharges = "Table Charges is required";
-    }
-    if (!data.ratePerMin1.trim()) {
-      errors.ratePerMin1 = "Rate per Minute 1 is required";
-    }
-    if (!data.ratePerMin2.trim()) {
-      errors.ratePerMin2 = "Rate per Minute 2 is required";
-    }
-    if (!data.roomRate.trim()) {
-      errors.roomRate = "Room Rate is required";
-    }
-    if (!data.tableTheme.trim()) {
-      errors.tableTheme = "Table Theme is required";
-    }
-
+    if (!(data.tableName || "").trim()) errors.tableName = "Table Name is required";
+    if (!(data.tableCharges || "").trim()) errors.tableCharges = "Table Charges are required";
+    if (!(data.ratePerMin1 || "").trim()) errors.ratePerMin1 = "Rate per Minute 1 is required";
+    if (!(data.ratePerMin2 || "").trim()) errors.ratePerMin2 = "Rate per Minute 2 is required";
+    if (!(data.roomRate || "").trim()) errors.roomRate = "Room Rate is required";
+    if (!(data.tableTheme || "").trim()) errors.tableTheme = "Table Theme is required";
     return errors;
   };
 
@@ -540,3 +525,4 @@ const updateSubmitData = async () => {
 }
 
 export default TableManagement;
+  
