@@ -14,4 +14,22 @@
     background-color: #ffffff; 
     /* padding: 20px;  */
   }
+  @media(min-width: 768px) and (max-width: 1024px) {
+  .asidebars{
+      display: flex !important;
+      flex-direction: column !important;
+
+  }
+  .leftasidebar { 
+      width: 100% !important;
+  }
+
+ 
+
+}
+@media(max-width: 1024px) {
+  .hidingbutton{
+    display: block !important;
+  }
+}
   
