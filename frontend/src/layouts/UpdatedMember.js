@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Aside from '../components/asidebar/Aside';
 import Dashboard from '../pages/asideright/Dashboard';
@@ -10,12 +10,17 @@ import Menu from '../pages/asideright/menu/Menu';
 import '../layouts/UpdatedMember.css';
 
 function UpdatedMember() {
+  const [show ,setshow]=useState(false);
+  const togglebar=()=>{
+    setshow(!show);
+  }
   return (
     <div className="asidebars">
+      <><button className='hidingbutton' style={{display:"none"}} onClick={togglebar}>{show?"show":"hide"}</button></>
       {/* Left Sidebar */}
-      <div className="leftasidebar">
+    {!show?  <div className="leftasidebar">
         <Aside />
-      </div>
+      </div>:<div></div>}
 
       {/* Right Content Area */}
       <div className="rightasidebar">
