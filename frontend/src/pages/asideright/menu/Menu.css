@@ -1,148 +1,215 @@
 /* Common Banner Styling */
 .banner {
-    position: relative;
-    background-color: #000;
-    min-height: 500px; /* Decreased the banner height */
+  position: relative;
+  background-color: #000;
+  min-height: 500px; /* Decreased the banner height */
 }
 
 .banner:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../../../assetes/menu/download.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    overflow: hidden;
-    /* z-index: -1; */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assetes/menu/download.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  overflow: hidden;
+  /* z-index: -1; */
 }
 
 /* Common Banner Slide Layout */
 .banner-slide {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    color: #fff;
-    text-align: center;
-   
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  text-align: center;
 }
 
 /* First Slide: Center Text */
 .slide-one .banner-slide {
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
-.slide-one .banner-slide .one{
-    position: absolute;
-    top: 29%;
-    width: 109px;
-    left: 34%;
-
+.slide-one .banner-slide .one {
+  position: absolute;
+  top: 29%;
+  width: 109px;
+  left: 34%;
 }
-.slide-one .banner-slide .two{
-    position: absolute;
-    top: 218px;
-    width: unset;
-    left: 51%;
+.slide-one .banner-slide .two {
+  position: absolute;
+  top: 218px;
+  width: unset;
+  left: 51%;
+  animation-iteration-count: infinite;
 }
-.slide-one .banner-slide .three{
-    position: absolute;
-    top: 38%;
-    width: unset;
-    left: 62%;
+.slide-one .banner-slide .three {
+  position: absolute;
+  top: 38%;
+  width: unset;
+  left: 62%;
 }
-.slide-one .banner-slide .four{
-    position: absolute;
-    top: 76%;
-    width: unset;
-    right: 27%;
-    animation-delay: 5s;
-
+.slide-one .banner-slide .four {
+  position: absolute;
+  top: 76%;
+  width: unset;
+  right: 27%;
+  animation-delay: 5s;
 }
-.slide-one .banner-slide .five{
-    position: absolute;
-    top: 79%;
-    width: unset;
-    right: 61%;
-   animation-duration: 5s;
+.slide-one .banner-slide .five {
+  position: absolute;
+  top: 79%;
+  width: unset;
+  right: 61%;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
 }
-.slide-one .banner-slide .six{
-    position: absolute;
-    top: 44%;
-    width: unset;
-    left: 28%;
-    animation-duration: 2s;
-
+.slide-one .banner-slide .six {
+  position: absolute;
+  top: 44%;
+  width: unset;
+  left: 28%;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
 }
 
 /* Second Slide: Text Left, Image Right */
 .slide-two .banner-slide {
-    flex-direction: row;
-    justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.slide-one .banner-slide img{
-    margin-bottom: 10px;
+.slide-one .banner-slide img {
+  margin-bottom: 10px;
 }
 .slide-two .text {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 .slide-two .image {
-    flex: 1;
-    text-align: right;
+  flex: 1;
+  text-align: right;
 }
 
 /* Third Slide: Image Right, Text Center */
 .slide-three .banner-slide {
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-   
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
 }
 
 .slide-three .image {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .slide-three .text {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 /* Adjust Image */
 .pizza-img {
-    width: 550px !important;
-    height: auto;
-    margin: 20px;
+  width: unset !important;
+  height: auto;
+  margin: 20px;
 }
 
-.slide-one .banner-slide h2{
-    font-size: 150px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    display: inline-block;
-    animation: rotate360 2s ease;
+.slide-one .banner-slide h2 {
+  font-size: 150px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+  animation: rotate360 2s ease infinite ;
   
 }
-@keyframes rotate360{
-    0% {
-        transform: rotate(0deg); /* Initial position */
-      }
-      100% {
-        transform: rotate(360deg); /* Final position */
-      }
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg); 
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-@media (max-width: 767px) {
-    .pizza-img{
-        width: 100% !important;
-    }
+/* @media (max-width: 767px) {
+  .pizza-img {
+    width: 100% !important;
+  }
+} */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slide-one .banner-slide .one {
+    top: 41%;
+    left: 18%;
+  }
+  .slide-one .banner-slide .two {
+    top: 41%;
+    left: 52%;
+  }
+  .slide-one .banner-slide .three {
+    top: 49%;
+    left: 73%;
+  }
+  .slide-one .banner-slide .six {
+    top: 56%;
+    left: 3%;
+}
+.slide-one .banner-slide .four {
+    top: 79%;
+    right: -3%;
+}
+.slide-one .banner-slide .five{
+    right: 76%;
+}
+}
+
+
+@media(max-width:767px){
+  .slide-one .banner-slide h2{
+    
+    font-size: 60px;
+  }
+  .pizza-img{
+    width: 300px !important;
+  }
+  .slide-one .banner-slide .one {
+
+    top: 53%;
+    width: 66px;
+    left: 0%;
+}
+.slide-one .banner-slide .six {
+ 
+  top: 35%;
+  width: 68px;
+  left: 15%;
+}
+.slide-one .banner-slide .three {
+  top: 49%;
+  width: 89px;
+  left: 77%;
+}
+.slide-one .banner-slide .two {
+
+  top: 199px;
+  width: 102px;
+  left: 56%;
+}
+.slide-one .banner-slide .five {
+  top: 81%;
+  width: 80px;
+  right: 77%;
+}
+.slide-one .banner-slide .four {
+  top: 83%;
+  width: 97px;
+  right: 5%;
+}
 
 }
-
