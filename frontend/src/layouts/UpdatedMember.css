@@ -4,15 +4,21 @@
   }
   
   .leftasidebar {
-    width: 270px; 
+    width: 20%; 
     background-color: #f4f4f4; 
     /* padding: 20px;  */
   }
   
   .rightasidebar {
+    width: 80%;
     flex-grow: 1;
     background-color: #ffffff; 
     /* padding: 20px;  */
+  }
+  @media(max-width:767px){
+    .rightasidebar{
+      width: 100% !important;
+    }
   }
   @media(min-width: 768px) and (max-width: 1024px) {
   .asidebars{
@@ -23,6 +29,12 @@
   .leftasidebar { 
       width: 100% !important;
   }
+  .rightasidebar{
+    width: 100% !important;
+
+  }
+ 
+  
 
  
 

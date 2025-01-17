@@ -2,7 +2,9 @@
 .banner {
   position: relative;
   background-color: #000;
-  min-height: 500px; /* Decreased the banner height */
+  min-height: 500px;
+  width: 100%; /* Ensures it spans the parent width */
+  overflow: hidden; /* Prevents child elements from overflowing */
 }
 
 .banner:before {
@@ -130,6 +132,8 @@
   animation: rotate360 2s ease infinite ;
   
 }
+
+
 @keyframes rotate360 {
   0% {
     transform: rotate(0deg); 
@@ -143,6 +147,22 @@
     width: 100% !important;
   }
 } */
+
+
+
+.order-contents{
+  background-color: #fd9d3e;
+}
+.order-contents .menu-item:hover img {
+  filter: brightness(0) saturate(100%) invert(100%);
+  transition: filter 0.3s linear;
+}
+
+
+
+
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .slide-one .banner-slide .one {
     top: 41%;
@@ -212,4 +232,7 @@
   right: 5%;
 }
 
+}
+.order-top img{
+  width: 100%!important;
 }
