@@ -18,10 +18,10 @@ const options = {
   items: 1,
   loop: false,
   margin: 10,
-  nav: true,
+  nav: false,
   autoplay: false,
   autoplayTimeout: 5000,
-  autoplayHoverPause: true,
+  autoplayHoverPause: false,
   navText: ["<", ">"],
 };
 
@@ -44,7 +44,7 @@ function Menu() {
                 <img src={one} alt="" className="animate__animated animate__bounce one" />
                 <img src={two} alt="" className="animate__animated animate__backInDown two"/>
                 <img src={three} alt=""  className="three animate__animated animate__backInRight "/>
-                <img src={four} alt="" className="four animate__animated animate__backInDown"/>
+                <img src={four} alt="" className="four   animate__backInDown"/>
                 <img src={five} alt="" className="five animate__animated animate__zoomInDown" />
                 <img src={six} alt="" className="six animate__animated animate__fadeInTopRight" />
               </div>
@@ -80,6 +80,10 @@ function Menu() {
           </div>
         </OwlCarousel>
       </section>
+
+      <div>
+        
+      </div>
 
           <div style={{ width: '100%', height: '400px' }}>
       <iframe
