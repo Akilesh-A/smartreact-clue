@@ -32,7 +32,7 @@ function Aside() {
 
 <ul className="list-items collapse" id="menu-submenu">
     <li><Link to="/dashboard/updatedmember/menu">Menu 1</Link></li>
-    <li><a href="">Home 2</a></li>
+    <li><Link to="/dashboard/updatedmember/all-menu">All Menu</Link></li>
     <li><a href="">Home 3</a></li>
 </ul>
 </li>
